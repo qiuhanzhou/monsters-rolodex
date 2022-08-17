@@ -21,7 +21,25 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "parser": "babel-eslint",
+    "rules": {
+      "indent": [
+        "warn",
+        4
+      ],
+      "react/jsx-indent": [
+        "warn",
+        4,
+        {
+          "checkAttributes": true
+        }
+      ],
+      "react/react-in-jsx-scope": "off",
+      "react/destructuring-assignment": "off",
+      "no-nested-ternary": "warn",
+      "react/prop-types": "warn"
+    }
   },
   "browserslist": {
     "production": [
@@ -34,5 +52,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.21.0",
+    "eslint-plugin-react": "^7.30.1"
   }
 }
